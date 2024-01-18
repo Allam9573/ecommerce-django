@@ -37,12 +37,12 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
   </head>
   <body>
-    <div class="colorlib-loader"></div>
 
     <div id="page">
       {% include 'includes/navbar.html' %}
 
-      <div class="colorlib-intro">
+    {% block content %}
+	<div class="colorlib-intro">
         <div class="container">
           <div class="row">
             <div class="col-sm-12 text-center">
@@ -391,10 +391,7 @@
         </div>
       </footer>
     </div>
-
-    <div class="gototop js-top">
-      <a href="#" class="js-gotop"><i class="ion-ios-arrow-up"></i></a>
-    </div>
+	{% endblock content %}
 
     <!-- jQuery -->
     <script src="{% static 'js/jquery.min.js' %}"></script>
